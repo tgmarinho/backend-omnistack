@@ -35,4 +35,4 @@ app.use(express.urlencoded({ extended: true })); // para permitir envio de arqui
 app.use('/files', express.static(path.resolve(__dirname, '..', 'temp')))
 app.use(require('./routes')); // usando as rotas cadastradas no routes.js
 
-server.listen(3333); // defino um porta para o servidor executar e acessar requisições
+server.listen(process.env.PORT || 3333); // defino um porta para o servidor executar e acessar requisições
